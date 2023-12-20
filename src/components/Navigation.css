@@ -2,6 +2,15 @@ header {
     background: #BCB8B1;
 }
 
+.outer-container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    border: 1px solid red;
+}
+
 nav {
     display: flex;
     flex-direction: row;

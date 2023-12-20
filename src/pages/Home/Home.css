@@ -1,0 +1,75 @@
+header {
+    background: #BCB8B1;
+}
+
+.outer-container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    border: 1px solid red;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    color: #1E212B;
+    font-size: 1.5em;
+
+}
+
+ul li {
+    border-bottom: 1px solid #F4F3EE;
+}
+
+nav h2 {
+    color: #1E212B;
+
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    border: 1px solid red;
+}
+
+.inner-container {
+    flex-basis: 1400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px 0 40px;
+    align-items: center;
+    border: 1px dotted blue;
+}
+
+/*voorstellen*/
+
+.column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.column-one {
+    width: 50%;
+}
+
+.photoBox {
+    width: 250px;
+}
+
+.fotoNick {
+    width: 100%;
+}
+

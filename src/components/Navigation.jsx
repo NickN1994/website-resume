@@ -3,7 +3,7 @@ import './Navigation.css'
 
 function Navigation() {
     return (
-        <header className='outer-container'>
+        <header className='outer-container-nav'>
             <nav>
                 <div>
                     <h2>Nick Neggers</h2>
