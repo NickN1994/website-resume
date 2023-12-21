@@ -98,11 +98,36 @@ nav h2 {
 }
 
 /*about me*/
+.column-about-me {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 25px;
+    flex-shrink: 2;
+    border: 3px solid red;
+}
+
 .photoBoxEvent {
-    max-width: 3000px;
+    max-width: 500px;
 }
 
 .photoEvent {
     width: 100%;
+    /*border: 3px solid black;*/
+    border-radius: 25px;
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
 }
+
+.colum-about-me-text {
+    width: 600px;
+    border: 3px solid purple;
+    /*box-shadow: 0px 0px 68px 5px rgba(0,0,0,0.72);*/
+}
+
+.colum-about-me-text p {
+    margin: 10px 0;
+}
+
 
