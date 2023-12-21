@@ -6,7 +6,7 @@ function Home() {
 
     return (
         <>
-            <div className='outer-container'>
+            <div className='outer-container bgDark'>
                 <div className='inner-container'>
                     <section className='column'>
                         <div className='column-one'>

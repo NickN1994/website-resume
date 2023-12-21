@@ -21,9 +21,9 @@
   box-sizing: border-box;
 }
 
-/*achtergrondkleur #F4F3EE*/
-/*navbar kleur #1E212B*/
-/*detail kleur #BCB8B1*/
+/*achtergrondkleur #001427*/
+/*navbar kleur #001427*/
+/*detail kleur #F9532D*/
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 h1, h2, h3, h4, h5 {
@@ -32,9 +32,9 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
-/*h1 {*/
-/*  font-size: 3em;*/
-/*}*/
+h1 {
+  font-size: 3em;
+}
 
 h2 {
   font-size: 1.8em;

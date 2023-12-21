@@ -9,10 +9,10 @@ function Navigation() {
                     <h2>Nick Neggers</h2>
                 </div>
                 <ul>
-                    <li>Home</li>
-                    <li>About me</li>
-                    <li>Ervaring</li>
-                    <li>Portfolio</li>
+                    <li><p>Home</p></li>
+                    <li><p>About me</p></li>
+                    <li><p>Ervaring</p></li>
+                    <li><p>Portfolio</p></li>
                 </ul>
             </nav>
         </header>
