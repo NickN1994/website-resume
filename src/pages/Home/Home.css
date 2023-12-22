@@ -74,6 +74,19 @@ h1 span {
 
 }
 
+/*        SKILLS         */
+
+.skillBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid deeppink;
+    width: 1200px;
+}
+
+
 /*about me*/
 .column-about-me {
     display: flex;

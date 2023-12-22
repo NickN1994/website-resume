@@ -1,6 +1,7 @@
 import "./Home.css"
 import fotoNick from "./assets/VanuitHartEnZiel-230.jpg"
 import fotoEvent from "./assets/DSC09713kopie.jpg"
+import createSkillBox from "./Components/createSkillBox.jsx";
 
 function Home() {
 
@@ -26,6 +27,14 @@ function Home() {
 
             <div className='outer-container'>
                 <div className='inner-container'>
+                    <div className='skillBox'>
+                    {createSkillBox()}
+                    </div>
+                </div>
+            </div>
+
+            <div className='outer-container'>
+                <div className='inner-container'>
                     <section className='column-about-me'>
                         <div>
                             <div className='photoBoxEvent'>
@@ -41,7 +50,8 @@ function Home() {
                                 een zorgboerderij.
                                 Waarbij ik groepsbegeleider voor kinderen en jongeren met autisme en/of ADHD</p>
 
-                            <p> In 2017 maakte ik een begin in de coachingwereld door als Kindercoach aan het werk te gaan.
+                            <p> In 2017 maakte ik een begin in de coachingwereld door als Kindercoach aan het werk te
+                                gaan.
                                 Waarna ik ook al snel volwassenen ging coachen en begeleiden.
                                 Dat was voor mijn partner en mij een reden op een coachingopleiding op te zetten.
                                 Die we 5 jaar lang samen succesvol hebben gegeven
