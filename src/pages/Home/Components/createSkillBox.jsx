@@ -2,33 +2,34 @@ import html from "../assets/html.png"
 import css from "../assets/css.png"
 import js from "../assets/javascript.png"
 import react from "../assets/react.png"
-import java from "../assets/java.png"
-import spring from "../assets/spring.png"
+import java from "../assets/jjava.png"
+import spring from "../assets/ssspring.png"
 
 const skills = [{
     id: 1,
     image: html,
-    text: "HTML"
+    text: 'HTML'
 }, {
     id: 2,
     image: css,
-    text: "Css"
-}, {
-    image: js,
-    text: "Javascript"
+    text: 'Css'
 }, {
     id: 3,
-    image: react,
-    text: "React"
+    image: js,
+    text: 'Javascript'
 }, {
     id: 4,
-    image: java,
-    text: "Java"
+    image: react,
+    text: 'React'
 }, {
     id: 5,
+    image: java,
+    text: 'React'
+}, {
+    id: 6,
     image: spring,
-    text: "Spring Boot"
-}
+    text: 'Spring Boot'
+    }
 
 ];
 function createSkillBox () {
@@ -36,9 +37,9 @@ return (
 
         skills.map((box) => {
             return (
-                <div key={box.id}>
+                <div key={box.id} className='boxPerSkill'>
                     <img src={box.image} alt="image skill"/>
-                    <p>{box.text}</p>
+                    <h3>{box.text}</h3>
                 </div>)
 
         })

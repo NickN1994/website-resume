@@ -14,7 +14,6 @@ function Home() {
                             <h1>Hi, ik ben <span>Nick</span></h1>
                             <p>Ik volg momenteel de Bootcamp tot Full Stack Developer bij Novi Hogeschool.
                                 Naar verwachting zal ik eind februari mijn diploma in ontvangst nemen</p>
-                            <p>Tijdens deze opleiding werk ik met HTML, CSS, JavaScript, React, Java & Spring Boot</p>
                         </div>
                         <div>
                             <div className='photoBox'>
@@ -25,8 +24,9 @@ function Home() {
                 </div>
             </div>
 
-            <div className='outer-container'>
+            <div className='outer-container bgDark'>
                 <div className='inner-container'>
+                    <h2>Skills</h2>
                     <div className='skillBox'>
                     {createSkillBox()}
                     </div>
