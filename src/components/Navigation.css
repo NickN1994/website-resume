@@ -4,8 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    border: 1px solid red;
-    background-color: #2A2A2A;
+    background: linear-gradient(355deg, rgba(42,42,42,1) 53%, rgba(0,0,0,1) 100%);
 
 }
 
@@ -21,8 +20,6 @@ nav {
     width: 1400px;
     height: 115px;
     margin: 0 25px;
-    border: 1px solid blue;
-
 }
 
 ul {
