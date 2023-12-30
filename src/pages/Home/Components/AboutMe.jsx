@@ -1,7 +1,7 @@
 import fotoEvent from "../assets/DSC09713kopie.jpg";
 
 
-function aboutMe() {
+function AboutMe() {
     return(
         <section className='column-about-me'>
             <div>
@@ -44,4 +44,4 @@ function aboutMe() {
     )
 }
 
-export default aboutMe;
+export default AboutMe;

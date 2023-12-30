@@ -32,7 +32,7 @@ const skills = [{
     }
 
 ];
-function createSkillBox () {
+function CreateSkillBox () {
 return (
 
         skills.map((box) => {
@@ -47,4 +47,4 @@ return (
 
 }
 
-export default createSkillBox;
+export default CreateSkillBox;

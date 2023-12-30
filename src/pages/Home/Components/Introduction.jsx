@@ -2,7 +2,7 @@ import linkedin from "../assets/linkedin.png";
 import github from "../assets/github.png";
 import fotoNick from "../assets/fotoNick.png";
 
-function introduction () {
+function Introduction () {
     return (
         <section className='column'>
             <div className='column-one'>
@@ -23,4 +23,4 @@ function introduction () {
     )
 }
 
-export default introduction;
+export default Introduction;
