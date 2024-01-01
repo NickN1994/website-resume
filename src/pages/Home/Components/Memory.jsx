@@ -5,48 +5,82 @@ import react from "../assets/react.png"
 import java from "../assets/jjava.png"
 import spring from "../assets/ssspring.png"
 import bg from "../assets/pattern.png"
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import SingleCard from "./SingleCard.jsx";
 
 const cardImages = [
-    {"src": css},
-    {"src": html},
-    {"src": js},
-    {"src": react},
-    {"src": java},
-    {"src": spring},
+    {"src": css, matched: false},
+    {"src": html, matched: false},
+    {"src": js, matched: false},
+    {"src": react, matched: false},
+    {"src": java, matched: false},
+    {"src": spring, matched: false},
 ]
 
-function Memory () {
+function Memory() {
 
-const [cards, setCards] = useState([]);
-const [turns, setTurns] = useState(0);
+    const [cards, setCards] = useState([]);
+    const [turns, setTurns] = useState(0);
+    const [choiceOne, setChoiceOne] = useState(null);
+    const [choiceTwo, setChoiceTwo] = useState(null);
+    const [disabled, setDisabled] = useState(false);
+
 
     const shuffleCards = () => {
         const shuffledCards = [...cardImages, ...cardImages]
-            .sort(() => Math.random() - 0.5 )
+            .sort(() => Math.random() - 0.5)
             .map((card) => ({...card, id: Math.random()}));
         setCards(shuffledCards);
         setTurns(0);
     }
 
-    console.log(cards, turns);
+    const handleChoice = (card) => {
+        choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+    }
+
+    useEffect(() => {
+        if (choiceOne && choiceTwo) {
+            setDisabled(true)
+            if (choiceOne.src === choiceTwo.src) {
+                setCards(prevCards => {
+                    return prevCards.map(card => {
+                        if (card.src === choiceOne.src) {
+                            return {...card, matched: true}
+                        } else {
+                            return card;
+                        }
+                    })
+                })
+                resetCards()
+            } else {
+                setTimeout(() => resetCards(), 1000)
+            }
+        }
+    }, [choiceOne, choiceTwo])
+
+
+    const resetCards = () => {
+        setChoiceOne(null);
+        setChoiceTwo(null);
+        setTurns(prevTurns => prevTurns + 1);
+        setDisabled(false);
+    }
 
     return (
         <div className='memoryBox'>
             <button onClick={shuffleCards}>New Game</button>
             <div className="card-grid">
-            {cards.map(card => (
-                <div className='card' key={card.id}>
-                    <div>
-                        <img className='front-img' src={card.src} alt="card front"/>
-                        <img className='back-img' src={bg} alt="card back"/>
-                    </div>
-                </div>
-            ))}
-            <div>
+                {cards.map(card => (
+                    <SingleCard
+                        key={card.id}
+                        card={card}
+                        handleChoice={handleChoice}
+                        flipped={card === choiceOne || card === choiceTwo || card.matched}
+                        disabled={disabled}
+                    />
+                ))}
             </div>
-
-            </div>
+            <h3 className='turns'>Turns: {turns}</h3>
         </div>
     )
 }
