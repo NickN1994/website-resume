@@ -55,3 +55,24 @@ p {
   color: #1a1a1a;
 }
 
+/*      BUTTON    */
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 35px;
+  border: 3px solid #F9532D;
+  background: transparent;
+}
+
+button p {
+  color: #F9532D;
+  font-size: 1.2em;
+}
+
+button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 5px #F9532D, inset 0 0 10px 3px #F9532D;
+  /*box-shadow: 0 0 20px 5px #F9532D, inset 0 0 10px 3px rgba(0, 0, 0, 0.5);*/
+}
+

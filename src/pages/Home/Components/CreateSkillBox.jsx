@@ -33,15 +33,15 @@ import spring from "../assets/ssspring.png"
 //
 // ];
 
-function CreateSkillBox(props) {
-
-    return (
-        // <div className={matched === true ? "boxMatch" : "boxPerSkill"}>
-        <div className={props.matched === true ? "boxMatch" : "boxPerSkill"}>
-            <img src={props.image} alt="image skill"/>
-            <h3>{props.text}</h3>
-        </div>
-    )
-}
-
-export default CreateSkillBox;
+// function CreateSkillBox(props) {
+//
+//     return (
+//         // <div className={matched === true ? "boxMatch" : "boxPerSkill"}>
+//         <div className={"boxPerSkill"}>
+//             <img src={props.image} alt="image skill"/>
+//             <h3>{props.text}</h3>
+//         </div>
+//     )
+// }
+//
+// export default CreateSkillBox;

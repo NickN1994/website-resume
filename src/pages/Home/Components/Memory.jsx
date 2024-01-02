@@ -4,10 +4,11 @@ import js from "../assets/javascript.png"
 import react from "../assets/react.png"
 import java from "../assets/jjava.png"
 import spring from "../assets/ssspring.png"
-import bg from "../assets/pattern.png"
 import {useEffect, useState} from "react";
 import SingleCard from "./SingleCard.jsx";
-import CreateSkillBox from "./CreateSkillBox.jsx";
+import showTurns from "../../helpers/showTurns.jsx";
+
+
 
 const cardImages = [
     {src: css, matched: false, id: 1, text: 'CSS'},
@@ -26,13 +27,13 @@ function Memory() {
     const [choiceOne, setChoiceOne] = useState(null);
     const [choiceTwo, setChoiceTwo] = useState(null);
     const [disabled, setDisabled] = useState(false);
-    const [matchCard, setMatchCard] = useState(false);
     const [cssState, setCss] = useState(false);
     const [htmlState, setHtml] = useState(false);
     const [jsState, setJs] = useState(false);
     const [reactState, setReact] = useState(false);
     const [javaState, setJava] = useState(false);
     const [springState, setSpring] = useState(false);
+    const [buttonClick, setButtonClick] = useState(false);
 
 
     const shuffleCards = () => {
@@ -47,6 +48,7 @@ function Memory() {
         setReact(false);
         setJava(false);
         setSpring(false);
+        setButtonClick(true);
     }
 
     const handleChoice = (card) => {
@@ -104,7 +106,7 @@ function Memory() {
 
     return (
         <div className='memoryBox'>
-            <button onClick={shuffleCards}>New Game</button>
+            <button onClick={shuffleCards}><p>New Game</p></button>
             <div className="card-grid">
                 {cards.map(card => (
                     <SingleCard
@@ -117,20 +119,11 @@ function Memory() {
 
                 ))}
 
-                <h3 className='turns'>Turns: {turns}</h3>
+                {showTurns(turns, buttonClick)}
 
             </div>
 
             <div className='skillBox'>
-
-                {/*{cardImages.map((card) => (*/}
-                {/*    <CreateSkillBox*/}
-                {/*        key={card.id}*/}
-                {/*        image={card.src}*/}
-                {/*        text={card.text}*/}
-                {/*        matched={card.matchCard}*/}
-                {/*    />*/}
-                {/*))}*/}
 
                 <div className={cssState === true ? 'boxMatch' : 'boxPerSkill'}>
                     <img src={css} alt="image skill"/>

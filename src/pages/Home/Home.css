@@ -27,7 +27,7 @@
     margin: 75px 40px;
     justify-content: center;
     align-items: center;
-    border: 4px dotted blue;
+    /*border: 4px dotted blue;*/
     /*position: relative;*/
 }
 
@@ -98,40 +98,13 @@ h1 span {
 }
 
 /* ///////////////////     MEMORY  ///////////////////     */
-/*.container {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    --s: 200px; !* control the size *!*/
-/*    --c1: #1d1d1d;*/
-/*    --c2: #4e4f51;*/
-/*    --c3: #3c3c3c;*/
 
-/*    background: repeating-conic-gradient(*/
-/*            from 30deg,*/
-/*            #0000 0 120deg,*/
-/*            var(--c3) 0 180deg*/
-/*    )*/
-/*    calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),*/
-/*    repeating-conic-gradient(*/
-/*            from 30deg,*/
-/*            var(--c1) 0 60deg,*/
-/*            var(--c2) 0 120deg,*/
-/*            var(--c3) 0 180deg*/
-/*    );*/
-/*    background-size: var(--s) calc(var(--s) * 0.577);*/
-
-/*    padding: 1px 1px;*/
-/*}*/
 
 .container h2 {
     text-align: center;
     margin: 25px 0;
     color: white;
 }
-
-/*.whiteLayer {*/
-/*    background: rgb(242, 242, 242, 0.5);*/
-/*}*/
 
 .memoryBox {
     display: flex;
@@ -178,7 +151,7 @@ h1 span {
     justify-content: center;
     align-items: center;
     flex-shrink: 1;
-    border: 3px solid deeppink;
+    /*border: 3px solid deeppink;*/
 }
 
 .boxPerSkill {
@@ -193,7 +166,7 @@ h1 span {
     margin: 25px;
     border: 2px solid black;
     box-shadow: 0px 0px 68px 5px rgba(0,0,0,0.72);
-    /*box-shadow: 0px 0px 20px 5px #F9532D;*/
+
 }
 
 .boxPerSkill h3{
@@ -212,7 +185,6 @@ h1 span {
     height: 250px;
     margin: 25px;
     box-shadow: 0px 0px 20px 5px #F9532D;
-    /*transform: scale(1.2);*/
     color: #F9532D;
 }
 
