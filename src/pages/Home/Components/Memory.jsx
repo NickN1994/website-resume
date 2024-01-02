@@ -7,15 +7,17 @@ import spring from "../assets/ssspring.png"
 import bg from "../assets/pattern.png"
 import {useEffect, useState} from "react";
 import SingleCard from "./SingleCard.jsx";
+import CreateSkillBox from "./CreateSkillBox.jsx";
 
 const cardImages = [
-    {"src": css, matched: false},
-    {"src": html, matched: false},
-    {"src": js, matched: false},
-    {"src": react, matched: false},
-    {"src": java, matched: false},
-    {"src": spring, matched: false},
+    {src: css, matched: false, id: 1, text: 'CSS'},
+    {src: html, matched: false, id: 2, text: 'HTML'},
+    {src: js, matched: false, id: 3, text: 'Javascript'},
+    {src: react, matched: false, id: 4, text: 'React'},
+    {src: java, matched: false, id: 5, text: 'Java'},
+    {src: spring, matched: false, id: 6, text: 'Spring'}
 ]
+
 
 function Memory() {
 
@@ -24,6 +26,13 @@ function Memory() {
     const [choiceOne, setChoiceOne] = useState(null);
     const [choiceTwo, setChoiceTwo] = useState(null);
     const [disabled, setDisabled] = useState(false);
+    const [matchCard, setMatchCard] = useState(false);
+    const [cssState, setCss] = useState(false);
+    const [htmlState, setHtml] = useState(false);
+    const [jsState, setJs] = useState(false);
+    const [reactState, setReact] = useState(false);
+    const [javaState, setJava] = useState(false);
+    const [springState, setSpring] = useState(false);
 
 
     const shuffleCards = () => {
@@ -32,6 +41,12 @@ function Memory() {
             .map((card) => ({...card, id: Math.random()}));
         setCards(shuffledCards);
         setTurns(0);
+        setCss(false);
+        setHtml(false);
+        setJs(false);
+        setReact(false);
+        setJava(false);
+        setSpring(false);
     }
 
     const handleChoice = (card) => {
@@ -41,7 +56,9 @@ function Memory() {
     useEffect(() => {
         if (choiceOne && choiceTwo) {
             setDisabled(true)
+
             if (choiceOne.src === choiceTwo.src) {
+
                 setCards(prevCards => {
                     return prevCards.map(card => {
                         if (card.src === choiceOne.src) {
@@ -51,6 +68,25 @@ function Memory() {
                         }
                     })
                 })
+
+                if (choiceOne.src === css) {
+                    setCss(true);
+                }
+                if (choiceOne.src === html) {
+                    setHtml(true);
+                }
+                if (choiceOne.src === js) {
+                    setJs(true);
+                }
+                if (choiceOne.src === react) {
+                    setReact(true);
+                }
+                if (choiceOne.src === java) {
+                    setJava(true);
+                }
+                if (choiceOne.src === spring) {
+                    setSpring(true);
+                }
                 resetCards()
             } else {
                 setTimeout(() => resetCards(), 1000)
@@ -78,9 +114,56 @@ function Memory() {
                         flipped={card === choiceOne || card === choiceTwo || card.matched}
                         disabled={disabled}
                     />
+
                 ))}
+
+                <h3 className='turns'>Turns: {turns}</h3>
+
             </div>
-            <h3 className='turns'>Turns: {turns}</h3>
+
+            <div className='skillBox'>
+
+                {/*{cardImages.map((card) => (*/}
+                {/*    <CreateSkillBox*/}
+                {/*        key={card.id}*/}
+                {/*        image={card.src}*/}
+                {/*        text={card.text}*/}
+                {/*        matched={card.matchCard}*/}
+                {/*    />*/}
+                {/*))}*/}
+
+                <div className={cssState === true ? 'boxMatch' : 'boxPerSkill'}>
+                    <img src={css} alt="image skill"/>
+                    <h3>Css</h3>
+                </div>
+
+                <div className={htmlState === true ? 'boxMatch' : 'boxPerSkill'}>
+                    <img src={html} alt="image skill"/>
+                    <h3>HTML</h3>
+                </div>
+
+                <div className={jsState === true ? 'boxMatch' : 'boxPerSkill'}>
+                    <img src={js} alt="image skill"/>
+                    <h3>Javascript</h3>
+                </div>
+
+                <div className={reactState === true ? 'boxMatch' : 'boxPerSkill'}>
+                    <img src={react} alt="image skill"/>
+                    <h3>React</h3>
+                </div>
+
+                <div className={javaState === true ? 'boxMatch' : 'boxPerSkill'}>
+                    <img src={java} alt="image skill"/>
+                    <h3>Java</h3>
+                </div>
+
+                <div className={springState === true ? 'boxMatch' : 'boxPerSkill'}>
+                    <img src={spring} alt="image skill"/>
+                    <h3>Java</h3>
+                </div>
+
+            </div>
+
         </div>
     )
 }

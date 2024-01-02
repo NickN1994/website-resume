@@ -1,11 +1,5 @@
 import "./Home.css"
-import fotoNick from "./assets/fotoNick.png"
-import fotoEvent from "./assets/DSC09713kopie.jpg"
-import createSkillBox from "./Components/CreateSkillBox.jsx";
-import linkedin from "./assets/linkedin.png"
-import github from "./assets/github.png"
-import introduction from "./Components/Introduction.jsx";
-import aboutMe from "./Components/AboutMe.jsx";
+
 import Introduction from "./Components/Introduction.jsx";
 import CreateSkillBox from "./Components/CreateSkillBox.jsx";
 import AboutMe from "./Components/AboutMe.jsx";
@@ -34,10 +28,6 @@ function Home() {
                 <div className='inner-container'>
                     <h2>Skills</h2>
                     <Memory/>
-                    <div className='skillBox'>
-
-                        <CreateSkillBox/>
-                    </div>
                 </div>
             </div>
 
